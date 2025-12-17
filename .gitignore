@@ -1,3 +1,6 @@
+# Data (do not upload datasets)
+data/
+
 # History files
 .Rhistory
 .Rapp.history
