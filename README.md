@@ -64,3 +64,9 @@ Across scenarios, opening on Sundays would increase weekly revenue and result in
 a six-figure annual uplift per store. These results highlight the financial
 opportunity cost associated with remaining closed on Sundays.
 
+## Visualization
+
+The chart below summarizes estimated Chick-fil-A Sunday revenue under three
+counterfactual scenarios based on McDonald's weekend demand patterns.
+
+![Estimated Chick-fil-A Sunday Revenue](reports/cfa_sunday_revenue_scenarios.png)
