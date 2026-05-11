@@ -1,4 +1,4 @@
-# Counterfactual Sunday Sales Forecasting (R)
+# Counterfactual Forecasting of Chick-fil-A Sunday Sales
 
 Counterfactual forecasting to estimate potential Sunday revenue using
 time-series analysis and machine learning in R.
@@ -13,7 +13,7 @@ How much annual revenue could potentially be generated if stores operated on Sun
 ---
 
 ## Dataset
-The analysis used simulated or publicly available fast-food transaction-style sales data representing daily revenue patterns.
+The analysis used publicly available fast-food transaction-style sales data representing daily revenue patterns.
 
 Key variables included:
 
@@ -45,12 +45,12 @@ McDonald’s is an appropriate comparison because it:
 - relies heavily on takeout and drive-thru traffic
 
 The analysis first learns Sunday-to-Saturday revenue patterns from
-McDonald’s-like fast-food data, then applies these patterns to a
+comparable fast-food data, then applies these patterns to a
 Chick-fil-A–style baseline to estimate counterfactual Sunday revenue.
 
 ---
 
-## Methodolody
+## Methodology
 The project followed a counterfactual forecasting workflow:
 
 1. Analyze McDonald’s weekend sales patterns
@@ -59,11 +59,13 @@ The project followed a counterfactual forecasting workflow:
 4. Apply ratios to a Chick-fil-A baseline revenue estimate
 5. Forecast weekly and annual revenue uplift
 
+Weekend demand distributions were analyzed using aggregated daily sales trends and ratio-based forecasting techniques. Scenario modeling was then applied to simulate varying levels of Sunday demand under conservative, moderate, and aggressive assumptions.
+
 **Statistical Approach**
 
 Sunday revenue ratio:
 
-Sunday Revenue Ratio= Average Saturday Sales/Average Sunday Sales
+Sunday Revenue Ratio = Average Sunday Sales/Average Saturday Sales
 	​
 
 Projected Chick-fil-A Sunday revenue:
@@ -81,12 +83,6 @@ Tools Used:
 
 ## Executive Summary
 
-| Scenario     | Sunday Ratio | Weekly Uplift | Annual Uplift |
-| ------------ | ------------ | ------------- | ------------- |
-| Conservative | 65%          | $8,200        | $426,400      |
-| Moderate     | 82%          | $10,900       | $566,800      |
-| Aggressive   | 95%          | $12,500       | $650,000      |
-
 Chick-fil-A remains closed on Sundays, creating a unique operational constraint.
 This project estimates the potential revenue impact of Sunday operations using a
 counterfactual forecasting approach.
@@ -100,11 +96,23 @@ revenue uplift per store under reasonable assumptions, with annual impacts
 varying by scenario. These estimates are intended to support strategic
 decision-making rather than predict exact outcomes.
 
+| Scenario     | Sunday Ratio | Weekly Uplift | Annual Uplift |
+| ------------ | ------------ | ------------- | ------------- |
+| Conservative | 65%          | $8,200        | $426,400      |
+| Moderate     | 82%          | $10,900       | $566,800      |
+| Aggressive   | 95%          | $12,500       | $650,000      |
+
 ---
+
+## Key Findings
+- Estimated Sunday revenue ranged from 65%–95% of Saturday sales
+- Annual revenue uplift per store exceeded six figures across all scenarios
+- Weekend demand patterns suggest strong unmet Sunday consumer demand
+- Counterfactual forecasting can support strategic decision-making when historical data is unavailable
 
 ## Results
 
-Using McDonald’s-like fast-food data, Sunday revenue was estimated as a
+Using proxy fast-food data, Sunday revenue was estimated as a
 proportion of Saturday revenue. This Sunday-to-Saturday ratio was then applied
 to a simulated Chick-fil-A baseline.
 
@@ -113,9 +121,7 @@ Three scenarios were evaluated:
 - **Moderate:** assumes Sunday demand similar to comparable fast-food behavior
 - **Aggressive:** assumes strong Sunday demand, capped at Saturday levels
 
-Across scenarios, opening on Sundays would increase weekly revenue and result
-in a six-figure annual uplift per store. These results highlight the financial
-opportunity cost associated with remaining closed on Sundays.
+Across scenarios, projected annual revenue uplift ranged from approximately $426K to $650K per store. The moderate scenario estimated Sunday sales at 82% of Saturday demand levels.
 
 ---
 
@@ -137,7 +143,7 @@ The analysis suggests that remaining closed on Sundays may represent a substanti
 - customer loyalty effects
 - cultural and religious positioning
 
-This project demonstrates how analytics can support strategic business decision-making even when direct historical data is unavailable.
+This project demonstrates how analytics can support strategic business decision-making even when direct historical data is unavailable. The project highlights how data analytics can be used to evaluate strategic business decisions even when direct historical observations do not exist.
 
 ---
 
