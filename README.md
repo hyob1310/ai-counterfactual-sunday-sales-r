@@ -12,8 +12,13 @@ How much annual revenue could potentially be generated if stores operated on Sun
 
 ---
 
+## Why Counterfactual Forecasting?
+Counterfactual forecasting estimates outcomes for events that did not historically occur. Since Chick-fil-A stores are closed on Sundays, direct Sunday sales data does not exist. Proxy-based forecasting enables estimation of hypothetical revenue under alternate operational conditions.
+
+---
+
 ## Dataset
-The analysis used publicly available fast-food transaction-style sales data representing daily revenue patterns.
+The analysis used publicly available fast-food sales data aggregated at the daily level to model weekend demand behavior.
 
 Key variables included:
 
@@ -51,6 +56,8 @@ Chick-fil-A–style baseline to estimate counterfactual Sunday revenue.
 ---
 
 ## Methodology
+The analysis assumes that Chick-fil-A weekend demand behavior would follow patterns comparable to similar quick-service restaurant chains under normal operating conditions.
+
 The project followed a counterfactual forecasting workflow:
 
 1. Analyze McDonald’s weekend sales patterns
@@ -65,8 +72,9 @@ Weekend demand distributions were analyzed using aggregated daily sales trends a
 
 Sunday revenue ratio:
 
-Sunday Revenue Ratio = Average Sunday Sales/Average Saturday Sales
-	​
+Sunday Revenue Ratio = Average Sunday Sales/Average Saturday Sales 
+
+Sunday Revenue Ratio=Average Saturday SalesAverage Sunday Sales​
 
 Projected Chick-fil-A Sunday revenue:
 
@@ -143,7 +151,7 @@ The analysis suggests that remaining closed on Sundays may represent a substanti
 - customer loyalty effects
 - cultural and religious positioning
 
-This project demonstrates how analytics can support strategic business decision-making even when direct historical data is unavailable. The project highlights how data analytics can be used to evaluate strategic business decisions even when direct historical observations do not exist.
+The project highlights how data analytics can be used to evaluate strategic business decisions even when direct historical observations do not exist.
 
 ---
 
@@ -166,3 +174,19 @@ Future versions of the model could incorporate:
 - weather patterns
 - competitor density
 - advanced forecasting models such as Prophet or XGBoost
+
+---
+## Conclusion
+This project demonstrates how counterfactual forecasting and scenario modeling can be used to estimate hypothetical business outcomes in the absence of direct historical data. The analysis highlights the potential financial impact of Sunday operations while showcasing the role of analytics in strategic business decision-making.
+
+---
+
+## Skills Demonstrated
+- Counterfactual forecasting
+- Scenario modeling
+- Time-series analysis
+- Business analytics
+- Data preprocessing in R
+- Revenue forecasting
+- Data visualization with ggplot2
+- Strategic decision support
