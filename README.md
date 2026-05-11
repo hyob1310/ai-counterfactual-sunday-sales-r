@@ -5,6 +5,33 @@ time-series analysis and machine learning in R.
 
 ---
 
+## Business Problem
+Chick-fil-A closes on Sundays for religious and operational reasons. This creates a business question:
+
+How much annual revenue could potentially be generated if stores operated on Sundays?
+
+---
+
+## Dataset
+The analysis used simulated or publicly available fast-food transaction-style sales data representing daily revenue patterns.
+
+Key variables included:
+
+- Date
+- Day of week
+- Daily sales revenue
+- Weekend indicators
+- Saturday/Sunday sales behavior
+
+Data preprocessing steps included:
+
+- converting dates into weekday features
+- removing missing values
+- aggregating revenue by day
+- calculating weekend demand ratios
+- generating rolling averages for trend analysis
+
+---
 ## Proxy Comparison: Chick-fil-A vs McDonald’s
 
 Chick-fil-A does not operate on Sundays, so no direct Sunday sales data exists.
@@ -23,7 +50,42 @@ Chick-fil-A–style baseline to estimate counterfactual Sunday revenue.
 
 ---
 
+## Methodolody
+The project followed a counterfactual forecasting workflow:
+
+1. Analyze McDonald’s weekend sales patterns
+2. Calculate Sunday-to-Saturday revenue ratios
+3. Model demand variability across scenarios
+4. Apply ratios to a Chick-fil-A baseline revenue estimate
+5. Forecast weekly and annual revenue uplift
+
+**Statistical Approach**
+
+Sunday revenue ratio:
+
+Sunday Revenue Ratio= Average Saturday Sales/Average Sunday Sales
+	​
+
+Projected Chick-fil-A Sunday revenue:
+
+Estimated Sunday Revenue=Saturday Revenue×Sunday Ratio
+
+Tools Used:
+- R
+- tidyverse
+- lubridate
+- ggplot2
+- forecast package
+
+---
+
 ## Executive Summary
+
+| Scenario     | Sunday Ratio | Weekly Uplift | Annual Uplift |
+| ------------ | ------------ | ------------- | ------------- |
+| Conservative | 65%          | $8,200        | $426,400      |
+| Moderate     | 82%          | $10,900       | $566,800      |
+| Aggressive   | 95%          | $12,500       | $650,000      |
 
 Chick-fil-A remains closed on Sundays, creating a unique operational constraint.
 This project estimates the potential revenue impact of Sunday operations using a
@@ -66,6 +128,19 @@ counterfactual scenarios based on McDonald's weekend demand patterns.
 
 ---
 
+## Business Implications
+The analysis suggests that remaining closed on Sundays may represent a substantial opportunity cost. However, operational decisions must also consider:
+
+- brand identity
+- employee retention
+- operational expenses
+- customer loyalty effects
+- cultural and religious positioning
+
+This project demonstrates how analytics can support strategic business decision-making even when direct historical data is unavailable.
+
+---
+
 ## Limitations
 
 This analysis relies on proxy data and assumes that Chick-fil-A would exhibit
@@ -73,3 +148,15 @@ similar weekend demand patterns to comparable fast-food chains. Results may
 vary based on location, customer behavior, and brand-specific factors. The
 model is intended as a decision-support tool rather than a precise revenue
 forecast.
+
+---
+
+## Future Improvements
+Future versions of the model could incorporate:
+
+- real store-level transaction data
+- regional demand differences
+- sports/event traffic
+- weather patterns
+- competitor density
+- advanced forecasting models such as Prophet or XGBoost
